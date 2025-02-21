@@ -3,21 +3,14 @@ import { ChangeDetectionStrategy, Component, signal, WritableSignal } from "@ang
 @Component({
   templateUrl: './counter-page.component.html',
   styleUrl: './counter-page.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterPageComponent {
 
   counter: number = 10;
   counterSignal: WritableSignal<number> = signal(10);
 
-  constructor() {
-    setInterval(() => {
-      // this.counter+=1;
-      this.counterSignal.update(v => v + 1)
-      console.log('Ping')
-    }, 2000
-  );
-  }
+  constructor() { }
 
   increaseBy(value: number): void {
     this.counter += value;
