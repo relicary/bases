@@ -1,7 +1,9 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component, computed, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
   templateUrl: './hero-page.component.html',
+  imports: [UpperCasePipe]
 })
 export class HeroPageComponent {
 

@@ -10,8 +10,11 @@
   <td>Description:</td>
   <dd>{{ heroDescription() }}</dd>
 
-  <td>Uppercase:</td>
+  <td>Uppercase Readonly Signal:</td>
   <dd> {{ capitalizeName() }} </dd>
+
+  <td>Uppercase with Pipe:</td>
+  <dd> {{ this.name() | uppercase }} </dd>
 </dl>
 
 <button (click)="changeHero()" class="btn btn-primary mx-2">
