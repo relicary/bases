@@ -13,6 +13,10 @@ export class HeroPageComponent {
     return description;
   });
 
+  capitalizeName = computed(() => {
+    return this.name().toUpperCase();
+  });
+
   changeHero(): void {
     this.name.set('Spiderman');
     this.age.set(22);
@@ -26,5 +30,4 @@ export class HeroPageComponent {
     this.name.set('IronMan');
     this.age.set(45);
   }
-
 }
