@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, computed, signal, WritableSignal } from '@angular/core';
 
 interface Character {
   id: number,
@@ -7,6 +7,7 @@ interface Character {
 }
 
 @Component({
+  imports: [],
   templateUrl: './dragonball-page.component.html',
   styleUrl: './dragonball-page.component.css'
 })
@@ -19,4 +20,10 @@ export class DragonballPageComponent {
     {id: 1, name: 'Pikolo', power: 3000 },
     {id: 1, name: 'Vegeta', power: 8000 }
   ]);
+
+  powerClasses = computed(() => {
+    return {
+      'text-danger': true,
+    }
+  })
 }
