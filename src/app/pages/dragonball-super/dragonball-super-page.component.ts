@@ -8,21 +8,18 @@ interface Character {
 
 @Component({
   imports: [],
-  templateUrl: './dragonball-page.component.html',
-  styleUrl: './dragonball-page.component.css'
+  templateUrl: './dragonball-super-page.component.html',
+  styleUrl: './dragonball-super-page.component.css',
+  selector: 'dragonball-super'
 })
-export class DragonballPageComponent {
+export class DragonballSuperPageComponent {
 
   name = signal('');
   power = signal(0);
 
   characters: WritableSignal<Character[]> = signal<Character[]>([
     {id: 1, name: 'Goku', power: 9000 },
-    // {id: 2, name: 'Krilin', power: 2500 },
-    // {id: 3, name: 'Gohan', power: 9500 },
-    // {id: 4, name: 'Pikolo', power: 3000 },
-    // {id: 5, name: 'Vegeta', power: 8000 },
-    // {id: 6, name: 'Yamcha', power: 800 },
+    {id: 5, name: 'Vegeta', power: 8000 },
   ]);
 
   powerClasses = computed(() => {
