@@ -11,7 +11,6 @@ interface Character {
 @Component({
   imports: [CharacterListComponent, CharacterAddComponent],
   templateUrl: './dragonball-super-page.component.html',
-  styleUrl: './dragonball-super-page.component.css',
   selector: 'dragonball-super'
 })
 export class DragonballSuperPageComponent {
